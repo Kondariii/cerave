@@ -15,6 +15,11 @@
             <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/cerave_logo_blue_2x.jpg" alt="CeraVe Logo" class="logo-light">
             <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/cerave_logo_white.png" alt="CeraVe Logo" class="logo-dark">
         </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="products.html">Products</a></li>
@@ -167,6 +172,44 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
             setTheme(currentTheme);
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        function toggleMenu() {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Close mobile menu on window resize if open
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
         });
     </script>
 </body>
