@@ -2,27 +2,14 @@
 :root {
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
-    --text-primary: #333;
-    --text-secondary: #666;
+    --text-primary: #2c3e50;
+    --text-secondary: #34495e;
     --accent-primary: #0066cc;
     --accent-secondary: #003366;
-    --nav-bg: rgba(255, 255, 255, 0.95);
+    --nav-bg: rgba(255, 255, 255, 0.98);
     --card-bg: #ffffff;
-    --card-shadow: rgba(0, 0, 0, 0.1);
-    --border-color: #ddd;
-}
-
-.dark-theme {
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #2d2d2d;
-    --text-primary: #ffffff;
-    --text-secondary: #cccccc;
-    --accent-primary: #66a3ff;
-    --accent-secondary: #3385ff;
-    --nav-bg: rgba(26, 26, 26, 0.95);
-    --card-bg: #2d2d2d;
-    --card-shadow: rgba(0, 0, 0, 0.3);
-    --border-color: #404040;
+    --card-shadow: rgba(0, 0, 0, 0.08);
+    --border-color: #e0e0e0;
 }
 
 /* Reset and base styles */
@@ -61,44 +48,13 @@ img {
 
 /* Theme Switcher */
 .theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
-    transition: background-color 0.3s ease;
-}
-
-.theme-toggle:hover {
-    background-color: var(--bg-secondary);
-}
-
-.theme-toggle svg {
-    width: 24px;
-    height: 24px;
-}
-
-.sun-icon {
     display: none;
 }
 
-.moon-icon {
+.logo-light {
     display: block;
 }
 
-.dark-theme .sun-icon {
-    display: block;
-}
-
-.dark-theme .moon-icon {
-    display: none;
-}
 
 /* Navigation */
 .navbar {
@@ -215,28 +171,17 @@ img {
 }
 
 .logo img {
-    height: 40px;
+    height: 100px;
+    width: 100px;
     transition: transform 0.3s ease;
+}
+
+.logo {
+    padding: 10px 0;
 }
 
 .logo img:hover {
     transform: scale(1.05);
-}
-
-.logo-light {
-    display: block;
-}
-
-.logo-dark {
-    display: none;
-}
-
-.dark-theme .logo-light {
-    display: none;
-}
-
-.dark-theme .logo-dark {
-    display: block;
 }
 
 /* Hero Section */
@@ -530,11 +475,22 @@ footer {
     gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: start;
 }
 
-.footer-logo img {
-    height: 40px;
-    filter: brightness(0) invert(1);
+.footer-logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    color: #66a3ff;
+    font-weight: 900;
 }
 
 .footer-links {
@@ -1830,4 +1786,40 @@ body.menu-open {
     overflow: hidden;
     position: fixed;
     width: 100%;
+}
+
+/* Remove dark theme related styles */
+.dark-theme,
+.theme-toggle,
+.sun-icon,
+.moon-icon,
+.logo-dark {
+    display: none !important;
+}
+
+.logo-light {
+    display: block !important;
+}
+
+/* Enhanced card styles */
+.product-card,
+.feature-card,
+.value-card,
+.commitment-card,
+.info-card,
+.faq-item {
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover,
+.feature-card:hover,
+.value-card:hover,
+.commitment-card:hover,
+.info-card:hover,
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px var(--card-shadow);
 }
