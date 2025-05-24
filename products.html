@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeraVe Products | Skincare Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/cerave_logo_blue_2x.jpg" alt="CeraVe Logo" class="logo-light">
+            <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/cerave_logo_white.png" alt="CeraVe Logo" class="logo-dark">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="skincare-guide.html">Skincare Guide</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <div class="header-content" data-aos="fade-up">
+            <h1>Our Products</h1>
+            <p>Discover skincare solutions developed with dermatologists</p>
+        </div>
+    </header>
+
+    <section class="product-categories">
+        <div class="category-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-category="all">All Products</button>
+            <button class="filter-btn" data-category="cleansers">Cleansers</button>
+            <button class="filter-btn" data-category="moisturizers">Moisturizers</button>
+            <button class="filter-btn" data-category="serums">Serums</button>
+            <button class="filter-btn" data-category="sunscreen">Sunscreen</button>
+        </div>
+
+        <div class="products-grid">
+            <!-- Cleansers -->
+            <div class="product-item" data-category="cleansers" data-aos="fade-up">
+                <div class="product-image">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/products-v3/product-images-2021/cleansers/hydrating-facial-cleanser/cerave_hydrating_facial_cleanser_16oz_front-700x875-v2.jpg" alt="Hydrating Facial Cleanser">
+                </div>
+                <div class="product-info">
+                    <h3>Hydrating Facial Cleanser</h3>
+                    <p>For normal to dry skin</p>
+                    <ul class="product-features">
+                        <li>Non-comedogenic</li>
+                        <li>Fragrance-free</li>
+                        <li>With hyaluronic acid</li>
+                    </ul>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="product-item" data-category="cleansers" data-aos="fade-up">
+                <div class="product-image">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/products-v3/product-images-2021/cleansers/foaming-facial-cleanser/cerave_foaming_facial_cleanser_16oz_front-700x875-v2.jpg" alt="Foaming Facial Cleanser">
+                </div>
+                <div class="product-info">
+                    <h3>Foaming Facial Cleanser</h3>
+                    <p>For normal to oily skin</p>
+                    <ul class="product-features">
+                        <li>Removes excess oil</li>
+                        <li>Non-irritating</li>
+                        <li>With niacinamide</li>
+                    </ul>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Moisturizers -->
+            <div class="product-item" data-category="moisturizers" data-aos="fade-up">
+                <div class="product-image">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/products-v3/product-images-2021/facial-moisturizing/moisturizing-cream/cerave_moisturizing_cream_16oz_front-700x875-v2.jpg" alt="Moisturizing Cream">
+                </div>
+                <div class="product-info">
+                    <h3>Moisturizing Cream</h3>
+                    <p>Rich, non-greasy moisturizer</p>
+                    <ul class="product-features">
+                        <li>24-hour hydration</li>
+                        <li>With 3 ceramides</li>
+                        <li>For face and body</li>
+                    </ul>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Serums -->
+            <div class="product-item" data-category="serums" data-aos="fade-up">
+                <div class="product-image">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/products-v3/product-images-2021/serums/retinol-serum/cerave_retinol_serum_1oz_front-700x875-v2.jpg" alt="Retinol Serum">
+                </div>
+                <div class="product-info">
+                    <h3>Retinol Serum</h3>
+                    <p>Anti-aging treatment</p>
+                    <ul class="product-features">
+                        <li>Reduces fine lines</li>
+                        <li>Gentle formula</li>
+                        <li>With ceramides</li>
+                    </ul>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Sunscreen -->
+            <div class="product-item" data-category="sunscreen" data-aos="fade-up">
+                <div class="product-image">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/products-v3/product-images-2021/moisturizers/am-facial-moisturizing-lotion-with-sunscreen/cerave_facial_moisturizing_lotion_am_3oz_front-700x875-v2.jpg" alt="AM Facial Moisturizing Lotion with SPF">
+                </div>
+                <div class="product-info">
+                    <h3>AM Facial Moisturizing Lotion</h3>
+                    <p>With SPF 30 protection</p>
+                    <ul class="product-features">
+                        <li>Broad spectrum SPF</li>
+                        <li>Oil-free formula</li>
+                        <li>With niacinamide</li>
+                    </ul>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-benefits">
+        <div class="benefits-content" data-aos="fade-up">
+            <h2>Why Choose CeraVe?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/ceramides-animation/ceramides_image.gif" alt="Ceramides Technology">
+                    <h3>Essential Ceramides</h3>
+                    <p>All products contain 3 essential ceramides to help restore and maintain skin's natural barrier</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/mve-animation/mve_image.gif" alt="MVE Technology">
+                    <h3>MVE Technology</h3>
+                    <p>Controlled release for 24-hour hydration</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/dermatologist-developed/dermatologist_developed.jpg" alt="Dermatologist Developed">
+                    <h3>Dermatologist Developed</h3>
+                    <p>Created with dermatologists to meet your skin's needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/cerave_logo_white.png" alt="CeraVe Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Moisturizers</a></li>
+                        <li><a href="#">Cleansers</a></li>
+                        <li><a href="#">Serums</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Skincare Guide</a></li>
+                        <li><a href="#">Find a Retailer</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CeraVe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Theme switcher
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function setTheme(theme) {
+            document.body.classList.toggle('dark-theme', theme === 'dark');
+            localStorage.setItem('theme', theme);
+        }
+
+        const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+            setTheme(currentTheme);
+        });
+
+        // Product filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const category = button.dataset.category;
+
+                products.forEach(product => {
+                    if (category === 'all' || product.dataset.category === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
