@@ -32,12 +32,31 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--bg-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 /* Theme Switcher */
@@ -85,6 +104,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: var(--nav-bg);
     padding: 1rem 5%;
@@ -159,8 +179,8 @@ body {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 300px;
         height: 100vh;
         background: var(--nav-bg);
         flex-direction: column;
@@ -221,25 +241,26 @@ body {
 
 /* Hero Section */
 .hero {
-    height: auto;
+    width: 100%;
     min-height: 80vh;
     padding: 120px 5% 5rem;
-    background: linear-gradient(rgba(var(--bg-primary), 0.9), rgba(var(--bg-primary), 0.9)),
-                url('https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/homepage/homepage-hero-banner/cerave-homepage-hero-banner-desktop.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    overflow: hidden;
 }
 
 .hero-content {
+    flex: 1;
     max-width: 600px;
+    width: 100%;
 }
 
 .hero-image {
+    flex: 1;
     max-width: 600px;
+    width: 100%;
 }
 
 .hero-image img {
@@ -1619,4 +1640,194 @@ html {
 .cta-button.secondary:hover {
     background-color: var(--accent-primary);
     color: white;
+}
+
+/* Grid Layouts */
+.category-grid,
+.features-grid,
+.benefits-grid,
+.values-grid,
+.commitment-grid,
+.info-grid,
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Section Padding */
+section {
+    width: 100%;
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+/* Cards */
+.category-card,
+.feature-card,
+.product-item,
+.value-card,
+.commitment-card,
+.info-card,
+.faq-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forms */
+.contact-form,
+.form-group {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+}
+
+/* Responsive Images */
+.product-image img,
+.category-card img,
+.feature-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero {
+        padding: 100px 3% 3rem;
+    }
+
+    .container,
+    .category-grid,
+    .features-grid,
+    .benefits-grid,
+    .values-grid,
+    .commitment-grid,
+    .info-grid,
+    .faq-grid {
+        padding: 0 3%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 3% 3rem;
+    }
+
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .category-grid,
+    .features-grid,
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--nav-bg);
+        flex-direction: column;
+        padding: 80px 2rem 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px var(--card-shadow);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .category-grid,
+    .features-grid,
+    .benefits-grid,
+    .values-grid,
+    .commitment-grid,
+    .info-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 70px 3% 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        max-width: 100%;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Ensure content doesn't overflow */
+.product-grid,
+.routine-content,
+.about-content,
+.technology-content,
+.contact-content,
+.footer-content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+/* Fix for mobile menu scroll */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
